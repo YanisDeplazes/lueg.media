@@ -1,0 +1,5 @@
+/* TEAM */
+
+  Author: Yanis Deplazes
+  GitHub: https://github.com/YanisDeplazes
+	From: Zurich, Switzerland

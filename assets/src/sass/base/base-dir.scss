@@ -1,0 +1,20 @@
+/* ==========================================================================
+	@base-dir.scss
+	This file is used to contain all base imports.
+    Files inside this folder can contain global styles used in the project.
+============================================================================= */
+
+// Reset
+@import "reset";
+
+// Reset
+@import "normalize";
+
+// Font
+@import "font";
+
+// Base
+@import "base";
+
+// Typography
+@import "typography";

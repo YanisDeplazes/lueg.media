@@ -1,0 +1,11 @@
+/* ==========================================================================
+    @elements-dir.scss
+    This file is used to contain all elements imports.
+    Files inside this folder can contain styles specific to elements.
+============================================================================= */
+
+@import "query-page";
+@import "query-post";
+@import "result-page";
+@import "result-post";
+@import "result-none";

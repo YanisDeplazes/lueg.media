@@ -1,0 +1,22 @@
+/*
+-------------------------------------------------------------------------------------
+This file, variables.scss, is used to store the Sass Variables used throughout your project.
+
+Sass Variables are a way to store information that you want to reuse throughout your stylesheet.
+You can store things like colors, font stacks, or any CSS value you think you'll want to reuse.
+
+For example:
+
+$primary-color: #333;
+
+This variable now holds the color value, and can be used wherever you want to use this color.
+
+Sass Variables make it easy to make global changes: you just change the value of the variable, and all instances where it is used get updated.
+
+Keep your variables organized, consistently named, and well-documented. This ensures they can be easily understood and utilized by others.
+
+Note: Variables declared outside of any nested selectors are called "global variables", and are accessible from anywhere in the stylesheet.
+-------------------------------------------------------------------------------------
+*/
+
+$primary-color: #3b2af7;

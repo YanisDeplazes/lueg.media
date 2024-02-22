@@ -1,0 +1,12 @@
+/*
+-------------------------------------------------------------------------------------
+This file is dedicated to Sass Mixins, which are blocks of CSS declarations grouped into reusable entities.
+These mixins can then be included in other Sass files using the @include directive, enabling DRY (Don't Repeat Yourself) methodologies in our stylesheets.
+
+Mixins can take arguments, which allows us to produce a wide variety of styles with a few flexible, parameterized mixins.
+This functionality makes them powerful tools for abstracting complex CSS patterns, or for generating multiple style variants from a base.
+
+Whenever creating a new mixin or modifying an existing one, remember to document it well and note its usage and purpose.
+Doing so will ensure others can quickly understand and utilize these abstracted styles in their own development.
+-------------------------------------------------------------------------------------
+*/

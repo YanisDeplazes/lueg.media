@@ -1,0 +1,11 @@
+/* ==========================================================================
+    @template-parts-dir.scss
+    This file is used to contain all template parts imports.
+    Files inside this folder can contain styles specific to template parts.
+============================================================================= */
+
+@import "blocks/blocks-dir";
+@import "elements/elements-dir";
+@import "layouts/layouts-dir";
+@import "views/views-dir";
+@import "widgets/widgets-dir";

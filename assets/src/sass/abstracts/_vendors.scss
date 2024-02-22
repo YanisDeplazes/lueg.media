@@ -1,0 +1,37 @@
+/*
+-------------------------------------------------------------------------------------
+This file, vendor.scss, imports a set of default styles and utilities provided by WordPress.
+It is a part of the WordPress base styles package which contains styles and utilities used by WordPress core.
+
+1. Colors: This import includes the default color variables used in WordPress themes and plugins.
+2. Variables: This import consists of various SCSS variables used in WordPress, including font sizes, spacing units, and more.
+3. Mixins: This import is a collection of reusable mixins for generating complex CSS. Mixins allow you to define styles that you want to reuse throughout your stylesheet. 
+4. Breakpoints: This import contains the media query breakpoints used by WordPress for responsive design. It helps you to design and develop a website that is responsive and looks good on all devices.
+5. Animations: This import includes keyframes for various CSS animations used by WordPress. It allows you to use these predefined animations in your theme.
+6. Z-Index: This import sets a z-index layering context for the stacking order in complex interfaces.
+7. Default Custom Properties: This import contains custom CSS properties used by WordPress. They provide a way to use variable information within your CSS.
+
+These imports are meant to streamline your development process by providing a set of standardized, reusable styles and utilities.
+-------------------------------------------------------------------------------------
+*/
+
+// Colors: Default color variables used by WordPress.
+@import "node_modules/@wordpress/base-styles/colors";
+
+// Variables: Various other SCSS variables used in WordPress (font sizes, spacing units, etc.).
+@import "node_modules/@wordpress/base-styles/variables";
+
+// Mixins: Collection of reusable mixins for generating complex CSS.
+@import "node_modules/@wordpress/base-styles/mixins";
+
+// Breakpoints: Media query breakpoints used by WordPress for responsive design.
+@import "node_modules/@wordpress/base-styles/breakpoints";
+
+// Animations: Keyframes for various CSS animations used by WordPress.
+@import "node_modules/@wordpress/base-styles/animations";
+
+// Z-Index: Z-index layering context for stacking order in a complex interface.
+@import "node_modules/@wordpress/base-styles/z-index";
+
+// Default Custom Properties: Custom CSS properties used by WordPress.
+@import "node_modules/@wordpress/base-styles/default-custom-properties";

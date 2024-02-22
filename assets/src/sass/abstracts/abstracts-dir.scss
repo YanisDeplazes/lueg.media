@@ -1,0 +1,24 @@
+/* ==========================================================================
+	@abstracts-dir.scss
+	This file is used to contain all abstracts imports.
+    This file serves as an aggregate of all the abstracts (settings, helpers, and functions) used across our stylesheets. 
+    Abstracts are parts of our codebase that don't produce direct, tangible CSS output when compiled on their own. 
+============================================================================= */
+
+// Vendor Styles
+// These are third-party styles imported from libraries or frameworks.
+// For instance, we're using WordPress's base styles here for a consistent and efficient starting point for our stylesheets.
+// More details about each import are available in the 'vendor.scss' file.
+@import "vendors";
+
+// Variables
+// This file contains the Sass variables used in the theme.
+// These are pieces of data that can be reused across your stylesheets.
+// Think of them as a way to store information that you want to reuse throughout your site.
+// You can store things like colors, fonts, or any other CSS values you think you'll want to reuse.
+@import "variables";
+
+// Mixins
+// Mixins are a way of reusing a whole bunch of properties at once, or even whole CSS rules.
+// You can even give them arguments which allows you to produce a wide variety of styles with very few mixins.
+@import "mixins";
