@@ -1,0 +1,54 @@
+$gap: 20px;
+
+.query.person .type-person {
+	width: 100%;
+	// Using the break-mobile mixin
+	@include break-medium {
+		max-width: calc(100% / 3 - $gap / 3 * 2);
+	}
+	&-image {
+		aspect-ratio: 4/3;
+		width: 100%;
+		object-fit: cover;
+		height: auto;
+		overflow: hidden;
+		border-radius: 15px;
+	}
+	& .entry {
+		&.header {
+			.person-image {
+				aspect-ratio: 4/3;
+				width: 100%;
+				object-fit: cover;
+				height: auto;
+				overflow: hidden;
+				border-radius: 15px;
+			}
+		}
+		&.content {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			gap: 30px;
+			align-items: center;
+			.entry-title {
+				margin-block-start: 0;
+				margin-block-end: 0;
+				color: var(--wp--preset--color--dark);
+				font-weight: bold;
+			}
+			.social {
+				display: flex;
+				gap: 10px;
+				a {
+					text-decoration: none;
+					color: var(--wp--preset--color--neutral-dark);
+					transition: 0.17s ease-in;
+					&:hover {
+						color: var(--wp--preset--color--dark);
+					}
+				}
+			}
+		}
+	}
+}

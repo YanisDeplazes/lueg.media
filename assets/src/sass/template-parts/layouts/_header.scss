@@ -2,3 +2,27 @@
     @_header.scss
     The template part for displaying the header layout.
 ============================================================================= */
+
+header.the_header {
+	padding-top: 30px;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+
+	.header {
+		padding-bottom: 30px;
+		padding-top: 30px;
+		border-bottom: 1px solid var(--wp--preset--color--neutral-light);
+		margin: 0 30px;
+		background-size: cover;
+		.logo {
+			align-items: flex-start;
+			.text {
+				color: var(--wp--preset--color--primary);
+				text-align: left;
+				text-decoration: unset;
+			}
+		}
+	}
+}

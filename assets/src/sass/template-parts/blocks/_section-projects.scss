@@ -1,0 +1,26 @@
+section.projects {
+	padding: 40px 0px;
+
+	.more {
+		text-align: center;
+		width: 100%;
+		margin-block-end: 4rem;
+		margin-block-start: 2rem;
+		font-weight: bold;
+
+		& a {
+			color: var(--wp--preset--color--neutral-dark);
+			text-decoration: none;
+			transition: 0.17s ease-in;
+			&::after {
+				margin-left: 10px;
+				content: "→";
+				display: inline-block;
+			}
+
+			&:hover {
+				color: var(--wp--preset--color--dark);
+			}
+		}
+	}
+}

@@ -30,3 +30,63 @@
 		}
 	}
 }
+
+body {
+	main {
+		flex: 1;
+		width: 100%;
+		padding: 0px 30px;
+		max-width: 1100px;
+		margin: 30px auto 120px auto;
+	}
+	&.home {
+		main {
+			padding: unset;
+			margin: unset;
+			max-width: unset;
+		}
+	}
+	&.blog {
+		main {
+			margin: 60px auto 120px auto;
+		}
+	}
+}
+
+section {
+	.wrapper {
+		max-width: 1100px;
+		padding: 0px 30px;
+		margin-block-start: 50px;
+		margin-block-end: 120px;
+		margin-left: auto;
+		margin-right: auto;
+
+		& > h2 {
+			color: var(--wp--preset--color--neutral-dark);
+			text-transform: uppercase;
+			margin-block-start: 0;
+			margin-block-end: 10px;
+		}
+
+		& > h3 {
+			color: var(--wp--preset--color--dark);
+
+			margin-block-start: 10px;
+			margin-block-end: 30px;
+		}
+	}
+}
+
+body.error404 {
+	img {
+		width: 100%;
+		height: auto;
+		margin-block-end: 10px;
+	}
+}
+
+.data-scroll-container,
+.data-scroll {
+	will-change: transform;
+}

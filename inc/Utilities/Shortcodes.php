@@ -4,32 +4,29 @@
  *
  * @since   1.0
  * @package wp-blueprint/theme-classic
- * @link    https://wp-blueprint.dev/documentation/themes/core/handlers/shortcodes/
+ * @link
  * @license https://www.gnu.org/licenses/gpl-3.0 GPL-3.0
  */
 
 namespace WPBlueprint\Theme\Classic\Utilities;
 
 /**
- * This class extends the ShortcodeHandler in order to register Shortcodes.
+ * This class extends the Shortcodes Registration in order to register Shortcodes.
  */
-class Shortcodes extends \WPBlueprint\Theme\Core\Handlers\Shortcode {
+class Shortcodes {
 
 	/**
 	 * Constructor: Registering Shortcodes.
 	 */
 	public function __construct() {
-		$shortcodes = array(
-			array(
-				'copyright',
-				array( $this, 'copyright_callback' ),
-			),
-
-			// Define the Shortcodes here.
-
+		\WPBlueprint\Core\Registration\Shortcodes::set(
+			[
+				[
+					'tag'      => 'copyright',
+					'callback' => array( $this, 'copyright_callback' ),
+				],
+			]
 		);
-
-		parent::set_shortcodes( $shortcodes );
 
 	}
 
@@ -62,7 +59,7 @@ class Shortcodes extends \WPBlueprint\Theme\Core\Handlers\Shortcode {
 		// Construct copyright string.
 		$copyright  = '<p><span class="copyright">&copy; ' . $year . ' ' . get_bloginfo( 'name' ) . '</span> | ';
 		$copyright .= '<span class="produced">' . __( 'Produced by', 'wpblueprint' ) . ' ';
-		$copyright .= '<a href="https://wp-blueprint.dev" target="_blank" rel="noopener noreferrer" aria-label="' . __( 'WP Blueprint (opens in a new window)', 'wpblueprint' ) . '">';
+		$copyright .= '<a href="https://wp-blueprint.dev" class="link" target="_blank" rel="noopener noreferrer" aria-label="' . __( 'WP Blueprint (opens in a new window)', 'wpblueprint' ) . '">';
 		$copyright .= 'WP Blueprint</a></span></p>';
 
 		return $copyright;

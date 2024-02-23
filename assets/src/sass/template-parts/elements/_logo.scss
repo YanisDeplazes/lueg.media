@@ -1,0 +1,62 @@
+.logo {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	color: var(--wp--preset--color--light);
+	@include break-medium {
+		align-items: center;
+	}
+	h1,
+	p {
+		margin-block-end: 0;
+		margin-block-start: 0;
+	}
+	.image {
+		height: 27px;
+		width: auto;
+	}
+	.text {
+		color: var(--wp--preset--color--light);
+		margin-block-start: 0;
+		margin-block-end: 0;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.carousel {
+		display: flex;
+		position: relative;
+		max-width: 350px;
+		overflow: hidden;
+		width: 100%;
+		height: 50px;
+		.marquee {
+			position: absolute;
+			overflow: hidden;
+			white-space: nowrap;
+			box-sizing: border-box;
+
+			span {
+				display: inline-block;
+				padding-left: 100%;
+				animation: marquee 20s linear infinite;
+				will-change: transform;
+			}
+
+			&.repeater span {
+				animation-delay: -10s;
+			}
+		}
+	}
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0%);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
+}

@@ -2,3 +2,18 @@
 	@_content-post.scss
 	The template part for displaying the content post view.
 ============================================================================= */
+body.single {
+	.entry-header {
+		border-bottom: 1px solid var(--wp--preset--color--neutral-light);
+		h1 {
+			font-weight: bold;
+			text-transform: uppercase;
+			color: var(--wp--preset--color--dark);
+		}
+	}
+	.entry-footer {
+		border-top: 1px solid var(--wp--preset--color--neutral-light);
+		margin-block-start: 20px;
+		padding-top: 30px;
+	}
+}

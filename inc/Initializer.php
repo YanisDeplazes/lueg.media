@@ -22,17 +22,13 @@ final class Initializer {
 	 */
 	public static function get_services() {
 		return array(
-			Utilities\Enqueue::class,
-			Utilities\Gutenberg::class,
-			Utilities\Navigations::class,
+			Extensions\Seo::class,
+			Extensions\Favicon::class,
+			Utilities\Assets::class,
+			Utilities\Shortcodes::class,
 			Utilities\ThemeStyles::class,
 			Utilities\PostTypes::class,
-			Utilities\Taxonomies::class,
-			Utilities\WidgetAreas::class,
-			Utilities\Patterns::class,
-			Utilities\Shortcodes::class,
-			Utilities\PostMetas::class,
-
+			Utilities\Navigations::class,
 			Customizations\Functions::class,
 		);
 	}

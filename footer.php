@@ -14,7 +14,7 @@
 
 </main><!-- #main -->
 
-<footer role="contentinfo">
+<footer class="the_footer" role="contentinfo">
 	<?php get_template_part( 'template-parts/layouts/footer' ); ?>
 </footer>
 

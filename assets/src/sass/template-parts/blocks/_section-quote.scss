@@ -1,0 +1,43 @@
+section {
+	&.quote {
+		padding: 40px 0px;
+		background-color: var(--wp--preset--color--dark);
+		color: var(--wp--preset--color--light);
+		p {
+			& .highlight {
+				color: var(--wp--preset--color--primary);
+			}
+			#esports {
+				white-space: nowrap;
+				.icon {
+					&::after {
+						content: "🎮";
+					}
+				}
+			}
+
+			#passion {
+				font-weight: bold;
+				position: relative;
+				&::after {
+					content: url("../../../image/quote.svg");
+					width: calc(100% + 50px);
+					height: auto;
+					display: block;
+					position: absolute;
+					top: -5px;
+					left: -30px;
+				}
+			}
+			#precision {
+				white-space: nowrap;
+				position: relative;
+				.icon {
+					&::after {
+						content: "🎯";
+					}
+				}
+			}
+		}
+	}
+}

@@ -12,5 +12,5 @@
 
 
 <div class="header containers layouts alignwide content-wrapper">
-
+	<?php get_template_part( 'template-parts/elements/logo' ); ?>
 </div> <!-- .header containers layouts  -->

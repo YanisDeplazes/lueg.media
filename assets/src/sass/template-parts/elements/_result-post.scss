@@ -2,3 +2,113 @@
 	@_result-post.scss
 	The template part for displaying the resulting element from the post query.
 ============================================================================= */
+
+.query.post {
+	.type-post {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+		position: relative;
+
+		& .entry {
+			&.header {
+				.project-image-wrapper {
+					border-radius: 15px;
+					aspect-ratio: 16/9;
+					width: 100%;
+					height: auto;
+					overflow: hidden;
+					position: relative;
+
+					img {
+						margin-left: -15%;
+						width: 130%;
+						height: 100%;
+						object-fit: cover;
+						z-index: -2;
+					}
+					a {
+						z-index: 1;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(210, 59, 47, 0);
+						transition: all 0.3s ease;
+					}
+				}
+			}
+			&.content {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				gap: 30px;
+				.entry-title {
+					margin-block-start: 0;
+					width: 100%;
+					a {
+						color: var(--wp--preset--color--dark);
+						text-decoration: unset;
+					}
+				}
+				.game {
+					text-align: right;
+					color: var(--wp--preset--color--neutral-dark);
+					font-weight: bold;
+				}
+				.permalink {
+					z-index: 3;
+					pointer-events: auto;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translate(50%, -50%);
+					width: 75px;
+					height: 75px;
+					font-weight: bold;
+					align-items: center;
+					justify-content: center;
+					text-decoration: underline;
+					border-radius: 50px;
+					background-color: var(--wp--preset--color--primary);
+					color: white;
+					display: none;
+					@include break-medium {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+	&.small .type-post {
+		width: 100%;
+		@include break-medium {
+			width: calc(100% / 3 - 20px);
+		}
+		.entry {
+			&.content {
+				.permalink {
+					position: relative;
+					right: unset;
+					top: unset;
+					transform: unset;
+					width: unset;
+					height: unset;
+					display: block;
+					align-items: unset;
+					justify-content: unset;
+					text-decoration: unset;
+					border-radius: unset;
+					background-color: unset;
+					color: unset;
+				}
+			}
+		}
+	}
+}

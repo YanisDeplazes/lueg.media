@@ -9,13 +9,14 @@
  */
 
 $args = array(
-	'post_type' => 'post',
+	'post_type'      => 'post',
+	'posts_per_page' => 3,
 );
 
 $the_query = new WP_Query( $args );
 ?>
 
-<div class="query post">
+<div class="query post project-wrapper">
 	<?php
 	if ( $the_query->have_posts() ) :
 

@@ -17,10 +17,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-scroll-container>
 
-	<header>
-		<?php get_template_part( 'template-parts/layouts/header' ); ?>
-	</header>
+	<?php if ( ! is_front_page() ) : ?>
+		<header class="the_header">
+			<?php get_template_part( 'template-parts/layouts/header' ); ?>
+		</header>
+	<?php endif; ?>
 
 	<main id="main" class="site-main" role="main">

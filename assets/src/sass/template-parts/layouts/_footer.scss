@@ -2,3 +2,84 @@
     @_footer.scss
     The template part for displaying the footer layout.
 ============================================================================= */
+
+footer.the_footer {
+	@include break-medium {
+		margin: 0 30px;
+	}
+	& .footer {
+		background-color: var(--wp--preset--color--dark);
+		max-width: 1700px;
+		margin: 0px auto;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		@include break-medium {
+			border-radius: 45px 45px 0px 0px;
+		}
+		& h2 {
+			text-transform: uppercase;
+			margin-block-start: 0;
+			margin-block-end: 0;
+			color: white;
+		}
+		& .menu .menu-item {
+			display: inline-block;
+		}
+
+		& .notes .link,
+		.menu .menu-item > * {
+			color: white !important;
+			text-decoration: unset !important;
+		}
+		& .menu {
+			display: flex;
+			gap: 30px;
+			flex-wrap: wrap;
+			border-top: 1px solid var(--wp--preset--color--neutral-dark);
+			justify-content: center;
+			margin-block-start: 30px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+		& .email {
+			.has-display-3-font-size {
+				color: transparent;
+				display: inline-block;
+				text-decoration: none;
+				background: linear-gradient(
+					to top,
+					var(--wp--preset--color--primary) 50%,
+					var(--wp--preset--color--neutral-light) 50%
+				);
+				background-size: 100% 200%;
+				background-position: 0 0;
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transition: background-position 0.3s ease;
+
+				&:hover {
+					background-position: 0 100%;
+				}
+			}
+		}
+
+		& .fa-instagram {
+			text-decoration: none;
+			color: var(--wp--preset--color--light);
+			transition: 0.17s ease-in;
+			&:hover {
+				color: var(--wp--preset--color--neutral-light);
+			}
+		}
+		.wrapper {
+			background-color: var(--wp--preset--color--dark);
+			border-radius: 45px 45px 0px 0px;
+			color: white;
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 40px 30px;
+		}
+	}
+}

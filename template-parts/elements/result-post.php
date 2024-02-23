@@ -10,23 +10,32 @@
 
 ?>
 <article id="<?php echo esc_attr( get_post_type() ); ?>-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	<header class="entry header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php
 		if ( has_post_thumbnail() ) :
-			// Get Post Thumbnail.
-			get_the_post_thumbnail();
+			?>
+				<div class="project-image-wrapper">
+					<a aria-label="<?php echo esc_attr( get_the_title() ); ?>" href="<?php echo esc_url( get_permalink() ); ?>"></a>
+
+					<img
+						src="<?php echo esc_url( get_the_post_thumbnail_url() ); ?>"
+						alt="<?php echo esc_attr( get_the_title() ); ?>"
+						data-scroll
+						data-scroll-direction="horizontal"
+						data-scroll-speed="0.5"
+						class="data-scroll"
+					/>
+				</div>
+			<?php
 		endif;
 		?>
 	</header><!-- .entry.header -->
 
 	<div class="entry content">
-		<?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
+		<h4 class="entry-title has-xxl-font-size"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+		<?php if ( get_field( 'game' ) ) : ?>
+			<span class="game"><?php echo esc_html( get_field( 'game' ) ); ?></span>
+		<?php endif; ?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="permalink"><?php echo esc_html( __( 'explore', 'default' ) ); ?></a>
 	</div><!-- .entry content -->
-
-	<footer class="entry-footer default-max-width">
-
-	</footer><!-- .entry footer -->
-
 </article>

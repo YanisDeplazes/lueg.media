@@ -1,6 +1,6 @@
 {
-	"name": "wp-blueprint/theme-classic",
-	"description": "WP Blueprint Theme Classic that provides an object-oriented PHP foundation for WordPress projects that use the traditional WordPress theme system.",
+	"name": "yanisdeplazes/lueg-theme",
+	"description": "WordPress Theme for lueg.media",
 	"type": "wordpress-theme",
 	"license": "GPL-3.0-or-later",
 	"authors": [
@@ -9,9 +9,19 @@
 			"homepage": "https://github.com/YanisDeplazes"
 		}
 	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
 	"require": {
 		"php": ">=5.6",
-		"wp-blueprint/theme-core": "^1.0.0"
+		"wp-blueprint/core": "dev-main",
+		"wp-blueprint/theme-core": "^2.0.0-alpha.1",
+		"wpackagist-plugin/advanced-custom-fields": "6.2.6.1",
+		"wpackagist-plugin/wp-smushit": "^3.15",
+		"wpackagist-plugin/real-cookie-banner": "^4.5"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
@@ -36,7 +46,8 @@
 	"extra": {
 		"installer-paths": {
 			"vendor/{$vendor}/{$name}": [
-				"type:wordpress-theme"
+				"type:wordpress-theme",
+				"type:wordpress-plugin"
 			]
 		}
 	},
