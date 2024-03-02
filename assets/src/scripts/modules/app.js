@@ -39,6 +39,31 @@ class App {
 				});
 			}
 
+			// Initialize dimensions
+			let lastWidth = scrollContainer.offsetWidth;
+			let lastHeight = scrollContainer.offsetHeight;
+
+			app.setupLocomotiveScroll(scrollContainer);
+
+			// Set up a periodic check (e.g., every 500 milliseconds)
+			setInterval(() => {
+				const currentWidth = scrollContainer.offsetWidth;
+				const currentHeight = scrollContainer.offsetHeight;
+
+				// Check if dimensions have changed
+				if (
+					currentWidth !== lastWidth ||
+					currentHeight !== lastHeight
+				) {
+					// Update the scroll instance
+					app.scrollInstance.update();
+
+					// Update last known dimensions
+					lastWidth = currentWidth;
+					lastHeight = currentHeight;
+				}
+			}, 500); // Adjust interval as needed
+
 			if (document.getElementById('scrollToProjects')) {
 				document
 					.getElementById('scrollToProjects')
