@@ -14,5 +14,6 @@ get_template_part( 'template-parts/blocks/section', 'hero' );
 get_template_part( 'template-parts/blocks/section', 'projects' );
 get_template_part( 'template-parts/blocks/section', 'quote' );
 get_template_part( 'template-parts/blocks/section', 'team' );
+get_template_part( 'template-parts/blocks/section', 'welcome' );
 
 get_footer();
